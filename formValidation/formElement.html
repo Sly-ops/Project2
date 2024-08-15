@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript form validation: how to select the form elements</h1>
+
+    <form action="" method="post" id="form" name="form">
+        <label for="name">Username:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your Username" required>
+
+        <br><br>
+
+        <label for="pass">Password:</label>
+        <input type="pass" name="name" id="pass" placeholder="Enter your password" required>
+
+        <br><br>
+
+        <label for="pass">Confirm Password:</label>
+        <input type="pass" name="name" id="pass" placeholder="Confirm your password" required>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>    
+
+    <script>
+        // form validation:
+        // here we look at different ways of selecting form elements
+
+        // step 1
+        let form = document.forms.form.elements;
+        // console.log(form); 
+
+        // step 2
+        let formTags = document.forms['form'].elements;
+        // console.log(formTags);
+
+        // step 3:
+        let formElements = document.getElementById('form').elements;
+        console.log(formElements);
+
+        var formId = document.getElementById('form');
+
+    </script>
+</body>
+</html>

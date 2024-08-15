@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="p.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Who Wants to Be a Millionaire!</h1>
+        <p id="question">Who is the author of 'Harry Potter'?</p>
+        <div class="options">
+            <div id="question"></div>
+            <div id="options"></div>
+            <div id="timer"></div>
+            <button id="nextQuestion">Next Question</button>
+            
+        </div>
+        <div class="lifelines">
+            <button onclick="useLifeline('phoneAFriend')">Phone a Friend</button>
+            <button onclick="useLifeline('fiftyFifty')">50:50</button>
+            <button onclick="useLifeline('askTheAudience')">Ask the Audience</button>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="P.js"></script>
+</body>
+
+</html>

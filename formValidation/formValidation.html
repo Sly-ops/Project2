@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript form validation: how to select the form elements</h1>
+
+    <form action="" method="post" id="form" name="form">
+        <label for="name">Username:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your Username" required>
+
+        <br><br>
+
+        <label for="pass">Password:</label>
+        <input type="pass" name="name" id="pass" placeholder="Enter your password" required>
+
+        <br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="confirmPassword" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" required>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form> 
+
+    <script>
+        // to validate our form we need to get all tyhe form controls
+
+        let form = document.forms.form;
+        let username = form['username'];
+        let password = form['password'];
+        let confirmPassword = form['confirmPassword'];
+
+        // let us validate our form here
+        function validateForm() {
+            if (username.value === null || username.value === "" ) {
+                alert("Username can not be empty");
+                return false;
+            } if (password.value.lenght < 8 || password.value.lenght > 16){
+                alert("password must be between 8 and 16 characters");
+                return false;
+            } else if (password.value.lenght !== passwword.value.lenght) {
+                alert("password does not match!!!");
+                return false;
+            } else {
+                alert("form submitted successfully");
+            }
+        }
+    </script>
+
+</body>
+</html>

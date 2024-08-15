@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript form validation: how to select the form elements</h1>
+
+    <form action="" method="post" id="form" name="form">
+        <label for="name">Username:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your Username" required>
+
+        <br><br>
+
+        <label for="pass">Password:</label>
+        <input type="pass" name="name" id="pass" placeholder="Enter your password" required>
+
+        <br><br>
+
+        <label for="pass">Confirm Password:</label>
+        <input type="pass" name="name" id="pass" placeholder="Confirm your password" required>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form> 
+
+    <script>
+        // we now start to look at different for events
+
+        // we have: focus, blur, active, change and input events
+
+        let form = document.forms;      
+
+        let username = form['form'].elements[0]
+
+        username.addEventListener('input', function(){
+            console.table(`you entered ${username.value}`);
+        },false);
+    </script>
+
+</body>
+</html>
